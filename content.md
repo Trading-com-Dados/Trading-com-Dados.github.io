@@ -1,6 +1,5 @@
 # tradingcomdados library
 
----
 
 ## Introduction
 *Trading com Dados Library for quantitative finance*
@@ -10,14 +9,12 @@ The library consists of a collection of methods that can be used in order to hel
 ## Library Motivation and Description
 Trading com dados is an Edtech that provides educational content for people who want to know quantitative finance and in order to obtain that knowlegde, we need quality data, thus this library and our API service was created to solve that.
 
-## How to install
+# How to install
 ```python 
 pip install tradingcomdados
 ```
 
-
-
-## Hot to use
+# How to use
 ## Machine Learning
 This library has a few machine learning models that you can use in your daily activities.
 
