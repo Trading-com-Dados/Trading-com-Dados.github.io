@@ -1,6 +1,7 @@
-# tradingcomdados
+# tradingcomdados library
 
 ---
+
 ## Introduction
 *Trading com Dados Library for quantitative finance*
 
@@ -13,7 +14,8 @@ Trading com dados is an Edtech that provides educational content for people who 
 ```python 
 pip install tradingcomdados
 ```
----
+
+
 
 ## Hot to use
 ## Machine Learning
@@ -75,30 +77,29 @@ fd.get_funds_info()
 
 # You can either leave it empty or specify a CNPJ
 fd.get_funds_info('07.593.972/0001-86')
-
-
 ```
 
+# Premium Features
+The following features are available only for premium access (HUB).
+Contact our team to purchase your API key.
 
 ## Data Provider
 ```python
 from tradingcomdados import data_provider as dp
 
-dp.get_data
+dp.get_data()
 
-dp.get_data_tickers
+dp.get_data_tickers()
 
-dp.get_data_report
+dp.get_data_report()
 
-dp.get_data_report_tickers
+dp.get_data_report_tickers()
 
-dp.get_data_indicator
+dp.get_data_indicator()
 
 #Get historical data for indicators from API using standard parameters for the chosen ticker.
-dp.get_data_indicator_hist
+dp.get_data_indicator_hist()
 
 #Get data from API using standard parameters for the chosen ticker.
-dp.get_data_accounting
-
-
+dp.get_data_accounting()
 ```
