@@ -1,6 +1,6 @@
 site_name: ''
 
-repo_url: https://github.com/thefintz/docs-api
+repo_url: https://trading-com-dados.github.io/
 
 nav:
   - Introdução: 'index.md'
