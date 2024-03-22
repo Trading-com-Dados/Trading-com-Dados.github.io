@@ -90,16 +90,23 @@ dp.get_data()
 ```
 ### Indexes
 For example, in order to obtain data for brazilian indexes, you must specify the following parameters:
+
 type: 'index'
+
 request_type: 'historical_data_index'
+
 index: desired index. Supported indexes: AGFS, BDRX, GPTW, IBOV, IBRA, IBXL, IBXX, ICO2, ICON, IDIV, IEEX
 IFIL, IFIX, IFNC, IGCT, IGCX, IGNM, IMAT, IMOB, INDX, ISEE, ITAG, IVBX, MLCX, SMLL, UTIL
-start_date
-end_date_api_key
+
+start_date: format yyyy-mm-dd
+
+end_date: format yyyy-mm-dd
+
+api_key: valid api key from Trading com Dados HUB
 
 **An example, for IBOV:**
 ```python
-ibov = get_data('index',
+ibov = dp.get_data('index',
             'historical_data_index',
             'IBOV',
             '2022-01-01',
