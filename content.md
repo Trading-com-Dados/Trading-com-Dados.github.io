@@ -84,8 +84,31 @@ Contact our team to purchase your API key.
 ```python
 from tradingcomdados import data_provider as dp
 
+# Obtain price information for different types of assets, such as stocks, treasury, indexes, etc.
 dp.get_data()
 
+```
+### Indexes
+For example, in order to obtain data for brazilian indexes, you must specify the following parameters:
+type: 'index'
+request_type: 'historical_data_index'
+index: desired index. Supported indexes: AGFS, BDRX, GPTW, IBOV, IBRA, IBXL, IBXX, ICO2, ICON, IDIV, IEEX
+IFIL, IFIX, IFNC, IGCT, IGCX, IGNM, IMAT, IMOB, INDX, ISEE, ITAG, IVBX, MLCX, SMLL, UTIL
+start_date
+end_date_api_key
+
+**An example, for IBOV:**
+```python
+ibov = get_data('index',
+            'historical_data_index',
+            'IBOV',
+            '2022-01-01',
+            '2022-01-10',
+            api_key = 'api_key')
+```
+
+Other functions
+```python
 dp.get_data_tickers()
 
 dp.get_data_report()
