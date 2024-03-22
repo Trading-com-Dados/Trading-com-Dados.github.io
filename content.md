@@ -16,9 +16,7 @@ pip install tradingcomdados
 
 # How to use
 ## Machine Learning
-This library has a few machine learning models that you can use in your daily activities.
-
-With our lib, you can easily implement machine learning models to your daily activities in the financial market.
+This library has a few machine learning models that you can use in your daily activities, both supervised and unsupervised.
 
 ```python
 from tradingcomdados import unsupervised_learning as ul
