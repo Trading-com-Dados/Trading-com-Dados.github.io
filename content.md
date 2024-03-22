@@ -74,11 +74,11 @@ fd.get_funds_info()
 fd.get_funds_info('07.593.972/0001-86')
 ```
 
-# Premium Features
-The following features are available only for premium access (HUB).
-Contact our team to purchase your API key.
+# HUB Features
+Using our library, you can access data from Trading com Dados HUB as long as you have a valid API key.
+If you are interested about purchasing HUB, contact our team.
 
-## Data Provider
+## Access to HUB data can be made through data_provider module.
 ```python
 from tradingcomdados import data_provider as dp
 
