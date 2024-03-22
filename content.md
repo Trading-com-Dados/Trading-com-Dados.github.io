@@ -27,10 +27,10 @@ ul.clustering_pipeline()
 ```
 
 ## Alternative Data
-You can obtain alternative data from the Brazilian Market using this library
+You can obtain alternative data from the Brazilian Market using this module. Here, our goal is to facilitate data acquisition from sources such as CVM and others.
 
 Examples:
-* Indexes, such as IBOV, IFIX but also S&P 500
+* Updated composition of indexes, such as IBOV, IFIX but also S&P 500
 * Economy sectors of companies listed in the Brazilian stock exchange
 
 
@@ -89,7 +89,7 @@ dp.get_data()
 
 ```
 ### Indexes
-For example, in order to obtain data for brazilian indexes, you must specify the following parameters:
+For example, in order to obtain daily quotes for brazilian indexes, you must specify the following parameters:
 
 type: 'index'
 
