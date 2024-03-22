@@ -60,7 +60,7 @@ Fetches data of investment funds from the Brazilian Securities and Exchange Comm
 ```python
 from tradingcomdados import funds_data as fd
 
-# Fetching daily data containing information such as quote value, number of investors, and so on
+# Fetching daily data containing information such as quote value, number of investors, and net asset value (NAV)
 fd.get_funds_data()
 
 # You can either leave it empty or specify a CNPJ
