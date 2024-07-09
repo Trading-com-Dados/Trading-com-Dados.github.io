@@ -25,7 +25,7 @@ ul.clustering_pipeline()
 ```
 
 ## Alternative Data
-You can obtain alternative data from the Brazilian Market using this module. Here, our goal is to facilitate data acquisition from sources such as CVM and others.
+You can obtain alternative data from the Brazilian stock exchange (B3) and Nasdaq using this module. Here, our goal is to facilitate data acquisition from sources such as CVM and others.
 
 Examples:
 * Updated composition of indexes, such as IBOV, IFIX but also S&P 500
@@ -41,19 +41,19 @@ ad.index_composition()
 # Obtaining composition of IBOV
 ad.index_composition('ibov')
 
-# Obtaining sectors of Brazilian companies listed at B3
+# Obtaining sectors of Brazilian companies listed on B3
 ad.get_sectors('B3')
 
-# Obtaing sectors of companies listed at NASDAQ
+# Obtaing sectors of companies listed on NASDAQ
 ad.get_sectors('NASDAQ')
 
-# Obtaining sector classification of a particular company listed at B3
+# Obtaining sector classification of a particular company listed on B3
 ad.get_sectors('B3','PETR3') 
 
-# Obtaining sector classification of a particular company listed at NASDAQ
+# Obtaining sector classification of a particular company listed on NASDAQ
 ad.get_sectors('NASDAQ', 'AAPL')
 
-# Obtaining multiple companies
+# Obtaining multiple companies sector classification
 ad.get_sectors('NASDAQ', 'AAPL','META')
 ad.get_sectors('B3', 'VALE3', 'MGLU3', 'PETR4')
 
