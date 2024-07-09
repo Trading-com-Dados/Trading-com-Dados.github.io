@@ -42,13 +42,20 @@ ad.index_composition()
 ad.index_composition('ibov')
 
 # Obtaining sectors of Brazilian companies listed at B3
-ad.get_sectors()
+ad.get_sectors('B3')
 
-# Obtaining sector of a particular company
-ad.get_sectors('PETR')
+# Obtaing sectors of companies listed at NASDAQ
+ad.get_sectors('NASDAQ')
 
-# Notice we are not using numbers at the end of tickers
-ad.get_sectors('VALE')
+# Obtaining sector classification of a particular company listed at B3
+ad.get_sectors('B3','PETR3') 
+
+# Obtaining sector classification of a particular company listed at NASDAQ
+ad.get_sectors('NASDAQ', 'AAPL')
+
+# Obtaining multiple companies
+ad.get_sectors('NASDAQ', 'AAPL','META')
+ad.get_sectors('B3', 'VALE3', 'MGLU3', 'PETR4')
 
 ```
 
