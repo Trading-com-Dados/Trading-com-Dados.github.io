@@ -68,11 +68,12 @@ Fetches data of investment funds from the Brazilian Securities and Exchange Comm
 from tradingcomdados import funds_data as fd
 
 # Fetching daily data containing information such as quote value, number of investors, and net asset value (NAV)
-# You have to specify start and end dates, in the YYYY-MM-DD format.
-fd.get_funds_data(start = '2024-01-01', end = '2024-02-01')
 
 # You can either leave it empty or specify a CNPJ
-fd.get_funds_data('07.593.972/0001-86', start = '2024-01-01', end = '2024-02-01')
+fd.get_fund_data()
+
+# When specifying a CNPJ, you have to specify start and end dates, in the YYYY-MM-DD format.
+fd.get_fund_data(cnpj = '07.593.972/0001-86', start = '2024-07-01', end = '2024-07-10')
 
 
 # Fetch the registration data of investment funds
@@ -80,6 +81,9 @@ fd.get_funds_info()
 
 # You can either leave it empty or specify a CNPJ
 fd.get_funds_info('07.593.972/0001-86')
+
+
+
 ```
 
 # HUB Features
