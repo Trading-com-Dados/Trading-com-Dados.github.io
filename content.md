@@ -15,14 +15,7 @@ pip install tradingcomdados
 ```
 
 # How to use
-## Machine Learning
-This library has a few machine learning models that you can use in your daily activities, both supervised and unsupervised.
 
-```python
-from tradingcomdados import unsupervised_learning as ul
-
-ul.clustering_pipeline()
-```
 
 ## Alternative Data
 You can obtain alternative data from the Brazilian stock exchange (B3) and Nasdaq using this module. Here, our goal is to facilitate data acquisition from sources such as CVM and others.
