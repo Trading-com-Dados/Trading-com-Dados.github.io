@@ -40,6 +40,10 @@ ad.index_composition('sp500')
 ad.index_composition('ibov', assets=['RRRP3', 'ABEV3'])
 ad.index_composition('sp500', assets=['MMM', 'AAPL'])
 
+# You can use the parameter `mode` to return a list of the index composition symbols:
+ad.index_composition('ibov', mode = 'list')
+ad.index_composition('sp500', mode = 'list')
+
 # Obtaining economic and sector classifications for companies listed on NASDAQ, NYSE, AMEX, or the Brazilian stock exchange (B3):
 ad.get_sectors('B3')
 ad.get_sectors('NASDAQ')
