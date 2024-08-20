@@ -27,7 +27,7 @@ You can obtain alternative data from the Brazilian stock exchange (B3) and major
 - Active symbols of equities listed on B3 (stocks and BDRs) or investment funds such as Brazilian real estate investment funds (FII) and investment funds in agro-industrial productive chains (FIAGRO).
 - Historical cryptocurrency data from Binance.
 
-### Example Usage
+**Example Usage**
 
 ```python
 from tradingcomdados import alternative_data as ad
