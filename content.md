@@ -18,37 +18,52 @@ pip install tradingcomdados
 
 
 ## Alternative Data
-You can obtain alternative data from the Brazilian stock exchange (B3) and Nasdaq using this module. Here, our goal is to facilitate data acquisition from sources such as CVM and others.
+You can obtain alternative data from the Brazilian stock exchange (B3) and major U.S. stock exchanges such as NASDAQ, AMEX, and NYSE using this module. The goal is to facilitate data acquisition from sources like CVM, NASDAQ, B3, and others.
 
-Examples:
-* Updated composition of indexes, such as IBOV, IFIX but also S&P 500
-* Economy sectors of companies listed in the Brazilian stock exchange
+**Features:**
+- Updated Brazilian index compositions, such as IBOV, IFIX, IBRA, IDIV, SMLL, and BDRX.
+- Updated S&P 500 index composition.
+- Economic sector classifications for companies listed on the Brazilian stock exchange and major U.S. stock exchanges.
+- Active symbols of equities listed on B3 (stocks and BDRs) or investment funds such as Brazilian real estate investment funds (FII) and investment funds in agro-industrial productive chains (FIAGRO).
+- Historical cryptocurrency data from Binance.
 
+### Example Usage
 
 ```python
 from tradingcomdados import alternative_data as ad
 
-# General function
-ad.index_composition()
-
-# Obtaining composition of IBOV
+# Obtaining the index composition:
 ad.index_composition('ibov')
+ad.index_composition('sp500')
 
-# Obtaining sectors of Brazilian companies listed on B3
+# Returns the entire DataFrame from B3. You can also pass a list of desired symbols to get their composition:
+ad.index_composition('ibov', assets=['RRRP3', 'ABEV3'])
+ad.index_composition('sp500', assets=['MMM', 'AAPL'])
+
+# Obtaining economic and sector classifications for companies listed on NASDAQ, NYSE, AMEX, or the Brazilian stock exchange (B3):
 ad.get_sectors('B3')
-
-# Obtaing sectors of companies listed on NASDAQ
 ad.get_sectors('NASDAQ')
 
-# Obtaining sector classification of a particular company listed on B3
-ad.get_sectors('B3','PETR3') 
+# Obtaining sector classification for specific companies listed on B3:
+ad.get_sectors(stock_exchange='B3', symbols=['VALE3', 'PETR4'])
 
-# Obtaining sector classification of a particular company listed on NASDAQ
-ad.get_sectors('NASDAQ', 'AAPL')
+# Note: The function supports language options only for B3 data ('pt' for Portuguese; default is 'eng'):
+ad.get_sectors(stock_exchange='B3', symbols=['VALE3', 'PETR4'], B3_language='pt')
 
-# Obtaining multiple companies sector classification
-ad.get_sectors('NASDAQ', 'AAPL','META')
-ad.get_sectors('B3', 'VALE3', 'MGLU3', 'PETR4')
+# Obtaining sector classification for specific companies listed on major U.S. stock exchanges:
+ad.get_sectors(stock_exchange='AMEX', symbols=['ZOM', 'AAMC'])
+ad.get_sectors(stock_exchange='NASDAQ', symbols=['AAPL', 'META', 'TSLA', 'MSFT'])
+
+# Obtaining a DataFrame of active symbols for a specific asset class listed on the Brazilian stock exchange (B3):
+ad.get_symbols('STOCK')
+ad.get_symbols('FII')
+ad.get_symbols('BDR')
+
+# You can use the parameter `mode` to return a list of symbols. Defaults to 'df' (DataFrame):
+ad.get_symbols('BDR', mode='list')
+
+# Retrieving historical cryptocurrency data from Binance: 
+ad.get_histdata_binance('BTCUSDT', '5m', '2024-01-01', '2024-03-01')
 
 ```
 
